@@ -1,0 +1,258 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="debug-icc|Win32">
+      <Configuration>debug-icc</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="debug-icc|x64">
+      <Configuration>debug-icc</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="debug-msvc|Win32">
+      <Configuration>debug-msvc</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="release-icc|Win32">
+      <Configuration>release-icc</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="release-icc|x64">
+      <Configuration>release-icc</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="release-msvc|Win32">
+      <Configuration>release-msvc</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="debug-msvc|x64">
+      <Configuration>debug-msvc</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="release-msvc|x64">
+      <Configuration>release-msvc</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\source\dtsample\ns\atladd.h" />
+    <ClInclude Include="..\..\source\dtsample\ns\dxu.h" />
+    <ClInclude Include="..\..\source\dtsample\ns\miscutil.h" />
+    <ClInclude Include="..\..\source\dtsample\ns\stladd.h" />
+    <ClInclude Include="..\..\source\dtsample\ns\wapi.h" />
+    <ClInclude Include="..\..\source\dtsample\resource.h" />
+    <ClInclude Include="..\..\source\dtsample\sdkver.h" />
+    <ClInclude Include="..\..\source\dtsample\service\com\comptr.h" />
+    <ClInclude Include="..\..\source\dtsample\service\functype.h" />
+    <ClInclude Include="..\..\source\dtsample\service\miscutil.h" />
+    <ClInclude Include="..\..\source\dtsample\service\stladdon.h" />
+    <ClInclude Include="..\..\source\dtsample\service\strgutil.h" />
+    <ClInclude Include="..\..\source\dtsample\service\winapi\chkerror.h" />
+    <ClInclude Include="..\..\source\dtsample\service\winapi\directx\dx.h" />
+    <ClInclude Include="..\..\source\dtsample\service\winapi\handle.h" />
+    <ClInclude Include="..\..\source\dtsample\service\winapi\heap.h" />
+    <ClInclude Include="..\..\source\dtsample\service\winapi\icon.h" />
+    <ClInclude Include="..\..\source\dtsample\service\winapi\menu.h" />
+    <ClInclude Include="..\..\source\dtsample\service\winapi\srwlock.h" />
+    <ClInclude Include="..\..\source\dtsample\service\winapi\theme.h" />
+    <ClInclude Include="..\..\source\dtsample\service\winapi\uh.h" />
+    <ClInclude Include="..\..\source\dtsample\service\winapi\wam\animatio.h" />
+    <ClInclude Include="..\..\source\dtsample\ui\window\appmsg.h" />
+    <ClInclude Include="..\..\source\dtsample\ui\window\top\onscreen\dtsmpwnd.h" />
+    <ClInclude Include="..\..\source\dtsample\ui\window\top\twinimpl.h" />
+    <ClInclude Include="..\..\source\dtsample\ui\window\wi.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\source\dtsample\applayer\dtsample.cpp" />
+    <ClCompile Include="..\..\source\dtsample\service\miscutil.cpp" />
+    <ClCompile Include="..\..\source\dtsample\service\newdel.cpp" />
+    <ClCompile Include="..\..\source\dtsample\service\stladdon.cpp" />
+    <ClCompile Include="..\..\source\dtsample\service\strgutil.cpp" />
+    <ClCompile Include="..\..\source\dtsample\ui\window\top\onscreen\dtsmpwnd.cpp" />
+    <ClCompile Include="..\..\source\dtsample\ui\window\top\twinimpl.cpp" />
+    <ClCompile Include="..\..\source\dtsample\ui\window\wi.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\source\dtsample\resource\dtsample.exe.amd64.manifest" />
+    <None Include="..\..\source\dtsample\resource\dtsample.exe.manifest" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="..\..\source\dtsample\resource\dtsample.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="..\..\source\dtsample\resource\dtsample.ico" />
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{3758EA3D-0F72-4DEF-B427-51EB9D3B0570}</ProjectGuid>
+    <RootNamespace>dtsample</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0.10586.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='debug-msvc|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='debug-icc|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>Intel C++ Compiler 16.0</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='release-msvc|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='release-icc|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>Intel C++ Compiler 16.0</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='debug-msvc|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='debug-icc|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>Intel C++ Compiler 16.0</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='release-msvc|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='release-icc|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>Intel C++ Compiler 16.0</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="..\properties\macros.props" />
+    <Import Project="..\properties\manifest.props" />
+    <Import Project="..\properties\output directories.props" />
+    <Import Project="..\properties\include directories.props" />
+    <Import Project="..\properties\warning level.props" />
+    <Import Project="..\properties\multi-processor compilation.props" />
+    <Import Project="..\properties\cl general.props" />
+    <Import Project="..\properties\cl optimization.props" />
+    <Import Project="..\properties\cl code generation.props" />
+    <Import Project="..\properties\cl command line.props" />
+    <Import Project="..\properties\linker general.props" />
+    <Import Project="..\properties\linker debugging.props" />
+    <Import Project="..\properties\linker system.props" />
+    <Import Project="..\properties\linker advanced.props" />
+    <Import Project="..\properties\prefast.props" />
+  </ImportGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='debug-msvc|Win32'">
+    <ClCompile>
+      <AdditionalOptions>/D_WINDOWS %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalIncludeDirectories>$(SolutionDir)..\source\$(ProjectName);$(SolutionDir)..\source\arborgvt;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <AdditionalOptions>/SUBSYSTEM:WINDOWS,6.0 %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalLibraryDirectories>$(OutDir);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='debug-icc|Win32'">
+    <ClCompile>
+      <AdditionalOptions>/D_WINDOWS %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalIncludeDirectories>$(SolutionDir)..\source\$(ProjectName);$(SolutionDir)..\source\arborgvt;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <AdditionalOptions>/SUBSYSTEM:WINDOWS,6.0 %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalLibraryDirectories>$(OutDir);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='debug-msvc|x64'">
+    <ClCompile>
+      <AdditionalOptions>/D_WINDOWS %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalIncludeDirectories>$(SolutionDir)..\source\$(ProjectName);$(SolutionDir)..\source\arborgvt;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <AdditionalOptions>/SUBSYSTEM:WINDOWS,6.0 %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalLibraryDirectories>$(OutDir);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='debug-icc|x64'">
+    <ClCompile>
+      <AdditionalOptions>/D_WINDOWS %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalIncludeDirectories>$(SolutionDir)..\source\$(ProjectName);$(SolutionDir)..\source\arborgvt;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <AdditionalOptions>/SUBSYSTEM:WINDOWS,6.0 %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalLibraryDirectories>$(OutDir);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='release-msvc|Win32'">
+    <ClCompile>
+      <AdditionalOptions>/D_WINDOWS %(AdditionalOptions)</AdditionalOptions>
+      <EnablePREfast>false</EnablePREfast>
+      <AdditionalIncludeDirectories>$(SolutionDir)..\source\$(ProjectName);$(SolutionDir)..\source\arborgvt;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalOptions>/SUBSYSTEM:WINDOWS,6.0 %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalLibraryDirectories>$(OutDir);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='release-icc|Win32'">
+    <ClCompile>
+      <AdditionalOptions>/D_WINDOWS %(AdditionalOptions)</AdditionalOptions>
+      <EnablePREfast>false</EnablePREfast>
+      <AdditionalIncludeDirectories>$(SolutionDir)..\source\$(ProjectName);$(SolutionDir)..\source\arborgvt;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalOptions>/SUBSYSTEM:WINDOWS,6.0 %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalLibraryDirectories>$(OutDir);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='release-msvc|x64'">
+    <ClCompile>
+      <AdditionalOptions>/D_WINDOWS %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalIncludeDirectories>$(SolutionDir)..\source\$(ProjectName);$(SolutionDir)..\source\arborgvt;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalOptions>/SUBSYSTEM:WINDOWS,6.0 %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalLibraryDirectories>$(OutDir);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='release-icc|x64'">
+    <ClCompile>
+      <AdditionalOptions>/D_WINDOWS %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalIncludeDirectories>$(SolutionDir)..\source\$(ProjectName);$(SolutionDir)..\source\arborgvt;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalOptions>/SUBSYSTEM:WINDOWS,6.0 %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalLibraryDirectories>$(OutDir);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
